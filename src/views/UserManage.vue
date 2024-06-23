@@ -144,7 +144,7 @@ const deleteUser = async (user: any) => {
           更新
         </el-button>
 
-        <el-drawer v-model="updateDrawer" title="更新用户" :with-header="true">
+        <el-drawer v-model="updateDrawer" title="更新用户" :with-header="true" :modal="false">
           <el-form :model="userForm">
             <el-form-item label="用户名" :label-width="formLabelWidth" >
               <el-input disabled v-model="userForm.username" autocomplete="off"/>
