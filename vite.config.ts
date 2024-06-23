@@ -6,6 +6,7 @@ import vue from '@vitejs/plugin-vue'
 // https://vitejs.dev/config/
 export default defineConfig({
   server: {
+    hmr: true,
     proxy: {
       '/api': {
         // 跨域的服务器地址

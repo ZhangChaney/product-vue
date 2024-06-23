@@ -6,6 +6,10 @@ import { useRouter } from 'vue-router'
 
 const router = useRouter()
 onMounted( () => {
+  // auth()
+})
+
+const auth = () => {
   // 登录验证
   const user = sessionStorage.getItem('username')
   if (user === '' || user == null){
@@ -15,7 +19,7 @@ onMounted( () => {
     // session里有用户信息，说明已经登录，可以访问首页
     router.push('/ProductManage')
   }
-})
+}
 
 const isActive1 = ref(true)
 const isActive2 = ref(false)
@@ -45,7 +49,7 @@ const active3 = () => {
   <div class="common-layout">
     <el-container>
 
-      <el-header class="header">Header</el-header>
+      <el-header class="header">商品管理后台</el-header>
 
       <el-container>
 
